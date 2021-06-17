@@ -13,7 +13,12 @@ Finally, you must configure the application and initialize the database.
 
 ## Meeting Dependencies
 All of the Python dependencies must be installed as given in [the requirements file](requirements.txt).
-It is recommended that these be installed in a virtual environment.
+It is recommended that these be installed in a virtual environment by first doing the following:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+followed by
 ```bash
 pip install -r requirements.txt
 ```
@@ -23,7 +28,7 @@ The above command requires that the python package manager `pip` is installed.
 Finally, you will need to initialize the database.
 This can be done by copying a backup sqlite3 file `data.db` into the root directory.
 Alternatively,
-it's possible to create a new database file through the following:
+it's possible to create a new database file through the following at the project root:
 ```python
 import ibp
 engine = ibp.db.create_engine()
