@@ -46,6 +46,7 @@ def query_providers_by_id(session, id: int):
 
     with session.begin_nested():
         for inmate in inmates:
+            assert inmate not in session
             session.merge(inmate)
 
     inmates = session.query(Inmate).filter_by(id=id)
@@ -72,6 +73,7 @@ def query_providers_by_name(session, first_name: str, last_name: str):
 
     with session.begin_nested():
         for inmate in inmates:
+            assert inmate not in session
             session.merge(inmate)
 
     tolower = sqlalchemy.func.lower
