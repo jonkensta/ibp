@@ -30,8 +30,7 @@ def build_sessionmaker():
 Session = build_sessionmaker()
 
 
-# pylint: disable=redefined-builtin
-def query_providers_by_id(session, id: int):
+def query_providers_by_id(session, id: int):  # pylint: disable=redefined-builtin
     """Query inmate providers with an inmate ID.
 
     :param id: Inmate TDCJ or FBOP ID to search.
