@@ -16,7 +16,7 @@ instantiate anything.
 
 # pylint: disable=invalid-name, too-few-public-methods
 
-from marshmallow import Schema, fields, validate, pre_dump
+from marshmallow import Schema, fields, validate  # type: ignore
 
 from . import warnings
 

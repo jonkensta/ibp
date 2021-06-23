@@ -3,9 +3,9 @@
 import typing
 import itertools
 
-import barcode
-from barcode.writer import ImageWriter
-from PIL import Image, ImageDraw, ImageFont
+import barcode  # type: ignore
+from barcode.writer import ImageWriter  # type: ignore
+from PIL import Image, ImageDraw, ImageFont  # type: ignore
 
 # pylint: disable=invalid-name
 

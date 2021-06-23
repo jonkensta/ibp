@@ -2,10 +2,10 @@
 
 import urllib
 
-import sqlalchemy
-from sqlalchemy.orm import sessionmaker
+import sqlalchemy  # type: ignore
+from sqlalchemy.orm import sessionmaker  # type: ignore
 
-import pymates
+import pymates  # type: ignore
 
 from .models import Inmate
 from .base import get_toplevel_path

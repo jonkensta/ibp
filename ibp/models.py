@@ -25,12 +25,21 @@ anywhere else apart from here.
 import typing
 from datetime import datetime, timedelta
 
-import sqlalchemy
-from sqlalchemy import Column, Enum, Text, Integer, String, DateTime, Date, ForeignKey
-from sqlalchemy.orm import relationship
-from sqlalchemy.processors import str_to_date
-from sqlalchemy.schema import ForeignKeyConstraint
-from sqlalchemy.ext.declarative import declared_attr, declarative_base
+from sqlalchemy import (  # type: ignore
+    Column,
+    Enum,
+    Text,
+    Integer,
+    String,
+    DateTime,
+    Date,
+    ForeignKey,
+)
+
+from sqlalchemy.orm import relationship  # type: ignore
+from sqlalchemy.processors import str_to_date  # type: ignore
+from sqlalchemy.schema import ForeignKeyConstraint  # type: ignore
+from sqlalchemy.ext.declarative import declared_attr, declarative_base  # type: ignore
 
 from .base import config
 
