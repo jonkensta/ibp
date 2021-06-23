@@ -20,12 +20,7 @@ def create_engine():
     return sqlalchemy.create_engine(uri)
 
 
-def build_sessionmaker():
-    """Build a sessionmaker for our sqlite database."""
-    return sessionmaker(bind=create_engine(), future=True)
-
-
-Session = build_sessionmaker()
+Session = sessionmaker(bind=create_engine(), future=True)
 
 
 # pylint: disable=redefined-builtin, invalid-name
