@@ -22,7 +22,7 @@ def create_engine():
 
 def build_sessionmaker():
     """Build a sessionmaker for our sqlite database."""
-    return sessionmaker(bind=create_engine())
+    return sessionmaker(bind=create_engine(), future=True)
 
 
 Session = build_sessionmaker()
