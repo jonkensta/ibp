@@ -10,8 +10,6 @@ import pymates  # type: ignore
 from .models import Inmate
 from .base import get_toplevel_path
 
-# pylint: disable=invalid-name
-
 
 def create_engine():
     """Create an engine for our sqlite database."""
@@ -30,7 +28,8 @@ def build_sessionmaker():
 Session = build_sessionmaker()
 
 
-def query_providers_by_id(session, id: int):  # pylint: disable=redefined-builtin
+# pylint: disable=redefined-builtin, invalid-name
+def query_providers_by_id(session, id: int):
     """Query inmate providers with an inmate ID.
 
     :param id: Inmate TDCJ or FBOP ID to search.
